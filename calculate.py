@@ -1,3 +1,7 @@
+"""
+Author: Kitutu Paul
+August, 2017
+"""
 from salary_calculator import SalaryCalculator
 import sys
 

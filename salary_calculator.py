@@ -4,7 +4,8 @@ August, 2017
 """
 
 class SalaryCalculator(object):
-	"""docstring for SalaryCalculator"""
+	""" SalaryCalculator is able to calculate the net salary of a person 
+	after deducting the Pay As You Earn (PAYE) and Social Security contribution (NSSF)"""
 	NSSF_RATE = 0.05
 	def __init__(self, gross_salary):
 		super(SalaryCalculator, self).__init__()
@@ -13,6 +14,7 @@ class SalaryCalculator(object):
 		self.__nssf_contribution()
 		self.__find_netsalary()
 
+	#calculate the PAYE tax depending on the range of the gross salary
 	def __find_tax(self):
 		if self.gross_salary <= 235000:
 			self.tax = 0
@@ -27,11 +29,13 @@ class SalaryCalculator(object):
 		else:
 			self.tax = 0
 
-	def __find_netsalary(self):
-		self.netsalary = self.gross_salary-(self.tax+self.nssf_amount)
-
+	#calculate the social security contribution
 	def __nssf_contribution(self):
 		self.nssf_amount = self.gross_salary*self.NSSF_RATE
+
+	#calculate the net salary
+	def __find_netsalary(self):
+		self.netsalary = self.gross_salary-(self.tax+self.nssf_amount)
 
 	def get_tax(self):
 		return self.tax
