@@ -15,6 +15,7 @@ $ python calculate.py 1200000
 
 ## PAYE Calculations for the different age brackets
 Below is the calculations for the different salary brackets
+
 1. <= 235,000 --- No Tax
 2. > 235,000 and <= 335,000  ---- 10% of the amount by which chargeable income exceeds Ushs. 235,000
 3. > 335,000 and <= 410,000  ---- Ushs. 10,000 plus 20% of the Amount by which chargeable income exceeds Ushs. 335,000.
