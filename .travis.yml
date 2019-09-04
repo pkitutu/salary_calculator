@@ -1,6 +1,7 @@
+sudo: false
 language: python
 python:
   - "2.7"
 
 script: 
-  - test_salary_calculator.py
+  - python test_salary_calculator.py
